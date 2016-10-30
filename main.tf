@@ -5,7 +5,7 @@ resource "aws_s3_bucket" "remote_state" {
        enabled = true
      }
      lifecycle { 
-           # prevent_destroy = true
+           prevent_destroy = true
      }
      tags {
        Name = "remote_state-${var.environment}"
